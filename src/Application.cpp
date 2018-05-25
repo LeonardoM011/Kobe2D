@@ -44,12 +44,15 @@ int main(int argc, char **argv) {
 
 		object.Draw();
 		object2.Draw();
-		object2.Move(0.0f, 0.1f * Delta);
+		//object2.Move(0.0f, 0.1f * Delta);
 		if(Input::keydown[GLFW_KEY_E]) {
 			object.Move(0.1f * Delta, 0.0f);
 		}
 		if(Input::keydown[GLFW_KEY_R]) {
-			object.RotateD(50.0f * Delta, 0.0f, 0.0f, 1.0f);
+			object.RotateD(40.0f * Delta, 0.0f, 1.0f, 0.0f);
+		}
+		if(Input::keydown[GLFW_KEY_T]) {
+			camera.RotateD(50.0f * Delta, 0.0f, 0.0f, 1.0f);
 		}
 		// Calling Window Swap
 		window.Swap();
