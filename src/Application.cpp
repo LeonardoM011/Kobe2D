@@ -12,6 +12,7 @@
 #include "Object/Object.h"
 #include "Object/Tile.h"
 #include "Window/Input.h"
+#include "Object/Player.h"
 
 int main(int argc, char **argv) {
 	// Creating Window
@@ -30,8 +31,7 @@ int main(int argc, char **argv) {
 	// Creating our Shader
 	Shader shader("res/shaders/Basic.shader");
 
-	Tile object(-0.5f, -0.5f, shader, renderer, camera, "res/textures/Leo.png");
-	Tile object2(0.0f, 0.0f, shader, renderer, camera, "res/textures/Leo.png");
+	Player player(0.0f, 0.0f, 1.0f, 1.0f, "res/textures/Leo.png", shader, renderer, camera);
 
 
 	GLCall(glClearColor(1.0f, 1.0f, 1.0f, 1.0f));
@@ -41,8 +41,9 @@ int main(int argc, char **argv) {
 		window.Update();
 
 		double Delta = window.GetDelta();
-
-		object.Draw();
+		player.Draw(Delta);
+		
+		/*object.Draw();
 		object2.Draw();
 		//object2.Move(0.0f, 0.1f * Delta);
 		if(Input::keydown[GLFW_KEY_E]) {
@@ -53,7 +54,7 @@ int main(int argc, char **argv) {
 		}
 		if(Input::keydown[GLFW_KEY_T]) {
 			camera.RotateD(50.0f * Delta, 0.0f, 0.0f, 1.0f);
-		}
+		}*/
 		// Calling Window Swap
 		window.Swap();
 	}

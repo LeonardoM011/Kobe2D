@@ -16,7 +16,7 @@ set(RENDERER_CPP src/Renderer/Renderer.cpp)
 set(TEXTURE_CPP src/Texture/Texture.cpp)
 set(BUFFER_CPP src/Buffer/IndexBuffer.cpp src/Buffer/VertexArray.cpp src/Buffer/VertexBuffer.cpp)
 set(SHADER_CPP src/Shader/Shader.cpp)
-set(OBJECT_CPP src/Object/Object.cpp src/Object/Tile.cpp src/Object/Camera.cpp)
+set(OBJECT_CPP src/Object/Object.cpp src/Object/Tile.cpp src/Object/Camera.cpp src/Object/Player.cpp)
 
 add_executable(Kobe2D 
     ${ADDITIONAL_SRC} 

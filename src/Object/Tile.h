@@ -4,7 +4,7 @@
 
 class Tile {
 public:
-    Tile(float x, float y, Shader &shader, Renderer &renderer, Camera &camera, const std::string &texPath);
+    Tile(float x, float y, const std::string &texPath, Shader &shader, Renderer &renderer, Camera &camera);
     ~Tile();
     void Move(float x, float y);
     void SetPos(float x, float y);

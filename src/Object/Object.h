@@ -11,7 +11,7 @@
 
 class Object {
 public:
-    Object(const std::vector<float> &buffer, const std::vector<unsigned int> &indices, Shader &shader, Renderer &renderer, Camera &camera, const std::string &texPath);
+    Object(const std::vector<float> &buffer, const std::vector<unsigned int> &indices, const std::string &texPath, Shader &shader, Renderer &renderer, Camera &camera);
     ~Object();
     void Move(float x, float y);
     void SetPos(float x, float y);

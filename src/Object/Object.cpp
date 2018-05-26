@@ -1,7 +1,7 @@
 #include "Object.h"
 #include <glm/gtc/matrix_transform.hpp>
 
-Object::Object(const std::vector<float> &buffer, const std::vector<unsigned int> &indices, Shader &shader, Renderer &renderer, Camera &camera, const std::string &texPath) :
+Object::Object(const std::vector<float> &buffer, const std::vector<unsigned int> &indices, const std::string &texPath, Shader &shader, Renderer &renderer, Camera &camera) :
     _buffer(buffer),
     _indices(indices),
     _vb(&buffer[0], buffer.size() * sizeof(float)),
@@ -25,7 +25,7 @@ Object::Object(const std::vector<float> &buffer, const std::vector<unsigned int>
 }
 
 Object::~Object() {
-
+    delete _ib;
 }
 
 void Object::Move(float x, float y) {
