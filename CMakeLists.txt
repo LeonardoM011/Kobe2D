@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(Kobe2D VERSION 0.0.0)
+project(Kobe2D VERSION 0.0.1.0 LANGUAGES CXX)
 
 include(CTest)
 enable_testing()
@@ -40,3 +40,5 @@ endif(NOT OPENGL_FOUND)
 set(GL_LIBRARY GL X11 GLEW)
 
 target_link_libraries(Kobe2D glfw ${GL_LIBRARY} m)
+
+set_target_properties(Kobe2D PROPERTIES OUTPUT_NAME "Kobe2D V${PROJECT_VERSION}")

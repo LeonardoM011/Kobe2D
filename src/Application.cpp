@@ -16,7 +16,7 @@
 
 int main(int argc, char **argv) {
 	// Creating Window
-    Window window("Kobe2D", 640, 480);
+    Window window("Kobe2D V0.0.1.0", 640, 480);
 
 	// Printing our latest OpenGL Version
     std::cout << glGetString(GL_VERSION) << std::endl;
